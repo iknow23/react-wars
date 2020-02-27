@@ -44,11 +44,12 @@ export default class PersonDetails extends Component {
 
   render() {
     const {person, loading} = this.state;
+    const {dataName} = this.props;
 
     if (loading) return <Spinner />;
 
     if (!person) {
-      return <span>Select a person from a list</span>
+      return <span>Select a {dataName} from a list</span>
     }
 
     const {
